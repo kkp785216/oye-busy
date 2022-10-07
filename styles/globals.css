@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url(../public/fonts/Mulish/static/Mulish-Light.ttf);
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../public/fonts/Montserrat/static/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../public/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../public/fonts/Poppins/Poppins-Regular.ttf);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,6 +1,10 @@
 import Head from 'next/head'
+import HeroSection from '../components/HeroSection';
+import Container from '../components/Layout';
 
-export default function Home() {
+export default function Home(props) {
+  const {city} = props;
+
   return (
     <div>
       <Head>
@@ -9,7 +13,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      Hello this is krishna
+      <Container>
+        <HeroSection city={city[0]} />
+      </Container>
     </div>
   )
+}
+
+
+export async function getServerSideProps({req}) {
+  const resp = await fetch(`http://${req.headers.host}/api/city`);
+  const data = await resp.json();
+  return {
+    props: { // will be passed to the page component as props
+      city: data
+    },
+  }
 }

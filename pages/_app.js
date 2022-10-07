@@ -4,10 +4,15 @@ import Header from '../components/Header';
 
 const Layout = ({ children }) => {
   const router = useRouter();
-  console.log(router)
 
   switch (router.pathname) {
     case '/':
+      return (<>
+        <Header />
+        {children}
+      </>)
+
+    default:
       return (<>
         <Header />
         {children}
@@ -16,11 +21,11 @@ const Layout = ({ children }) => {
 }
 
 function MyApp({ Component, pageProps }) {
-  return (<>
+  return (<div className='font-["Mulish",sans-seri]'>
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  </>)
+  </div>)
 }
 
 export default MyApp
