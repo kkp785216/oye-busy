@@ -12,11 +12,14 @@ const HeroSection = ({city}) => {
               <span className='uppercase text-[clamp(12.3096px,1.1083vw,21.2796px)] mb-[clamp(16px,1.61458vw,31px)] tracking-[0.305em]'>{city.heroSection.title}</span>
               <h2 className='text-[clamp(16px,2.062vw,39.5974px)] mb-[clamp(16px,1.25vw,24px)] max-w-[480px] font-["Montserrat",sans-seri] font-semibold'>{city.heroSection.heading}</h2>
               <p className='text-[clamp(13.9272px,0.7253vw,24.0759px)] mb-[clamp(6px,2.3958vw,46px)]'>{city.heroSection.description}</p>
-              <div className='bg-white shadow text-black max-w-[clamp(250px,21.77vw,418px)] px-[clamp(16px,1.1979vw,23px)] py-[clamp(14px,1.6666vw,32px)]'>
-                <span className='font-semibold'>Where do you need a service?</span>
-                <div>
-
-                </div>
+              <div className='bg-white shadow text-black max-w-[clamp(250px,21.77vw,418px)] px-[clamp(16px,1.1979vw,23px)] py-[clamp(14px,1.6666vw,32px)] rounded-[5px]'>
+                <span className='font-semibold block mb-[22px]'>Where do you need a service?</span>
+                <select className='w-full p-2 border rounded' id="selectcity">
+                  <option value="select">Select your city</option>
+                  {city.heroSection.form.map((e,i)=>(
+                    <option key={i} value={e.landingUrl}>{e.dropdownItem}</option>
+                  ))}
+                </select>
               </div>
           </div>
         </div>

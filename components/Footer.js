@@ -1,8 +1,13 @@
 import React from 'react'
+import Container from './Layout'
 
-const Footer = () => {
+const Footer = ({color}) => {
   return (
-    <div>Footer</div>
+    <div className={`bg-[${color ? '#EDEDED':'#343434'}]`}>
+      <Container>
+        Hello this is krishna
+      </Container>
+    </div>
   )
 }
 

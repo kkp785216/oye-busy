@@ -16,6 +16,10 @@
     font-family: 'Poppins';
     src: url(../public/fonts/Poppins/Poppins-Regular.ttf);
 }
+@font-face {
+    font-family: 'Inter';
+    src: url(../public/fonts/Inter/static/Inter-Regular.ttf);
+}
 
 @tailwind base;
 @tailwind components;
